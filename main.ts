@@ -5,7 +5,7 @@ import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { schema } from "./schema.ts";
 import { resolvers } from "./resolvers.ts";
-
+//Deno deploy
 
 const MONGO_URL = Deno.env.get("MONGO_URL");
 
@@ -13,6 +13,11 @@ if(!MONGO_URL){
   console.log("Fallo url");
   Deno.exit(-1);
 }
+
+
+
+
+
 
 const client = new MongoClient(MONGO_URL);
 
